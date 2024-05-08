@@ -23,29 +23,42 @@ class _GlassDemoPageState extends State<GlassDemoPage> {
 
   @override
   Widget build(BuildContext context) {
-    return SimpleTemplate(
-      title: "Frosted Glass Catalog",
-      background: Image(
-        image: _images[currentImageIndex],
-        fit: BoxFit.cover,
-        height: double.infinity,
-        width: double.infinity,
-        alignment: Alignment.center,
+    return Theme(
+      // Override the theme used in this page based on the current state.
+      data: ThemeData(
+        colorScheme: ColorScheme.fromSeed(
+            seedColor: [
+          Colors.green,
+          Colors.lightBlue,
+          Colors.blueAccent,
+          Colors.red
+        ][currentImageIndex]),
+        useMaterial3: true,
       ),
-      appBarActions: [
-        // Button that changes the background.
-        IconButton(
-          key: const Key("btn_change_background"),
-          icon: const Icon(Icons.image_outlined),
-          color: Theme.of(context).colorScheme.onPrimary,
-          onPressed: () {
-            setState(() {
-              currentImageIndex = (currentImageIndex + 1) % _images.length;
-            });
-          },
+      child: SimpleTemplate(
+        title: "Frosted Glass Catalog",
+        background: Image(
+          image: _images[currentImageIndex],
+          fit: BoxFit.cover,
+          height: double.infinity,
+          width: double.infinity,
+          alignment: Alignment.center,
         ),
-      ],
-      child: const GlassGallery(),
+        appBarActions: [
+          // Button that changes the background.
+          IconButton(
+            key: const Key("btn_change_background"),
+            icon: const Icon(Icons.image_outlined),
+            color: Theme.of(context).colorScheme.onPrimary,
+            onPressed: () {
+              setState(() {
+                currentImageIndex = (currentImageIndex + 1) % _images.length;
+              });
+            },
+          ),
+        ],
+        child: const GlassGallery(),
+      ),
     );
   }
 }
