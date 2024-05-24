@@ -31,7 +31,6 @@ class GlassSample extends StatelessWidget {
           sideLength: 150,
           tint: tint.withOpacity(opacity),
           blurSize: blurSize,
-          opacity: opacity,
         ),
         const SizedBox(
           height: 15,

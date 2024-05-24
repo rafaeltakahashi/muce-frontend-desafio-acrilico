@@ -1,4 +1,4 @@
-import 'package:acrilico/pages/glass_demo_page.dart';
+import 'package:acrilico/pages/main_menu_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -15,7 +15,7 @@ class App extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.green),
         useMaterial3: true,
       ),
-      home: const GlassDemoPage(),
+      home: const MainMenuPage(),
     );
   }
 }

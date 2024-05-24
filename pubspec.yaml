@@ -9,6 +9,7 @@ dependencies:
   flutter:
     sdk: flutter
   cupertino_icons: ^1.0.6
+  flutter_svg: ^2.0.10+1
 
 dev_dependencies:
   flutter_test:
@@ -16,9 +17,13 @@ dev_dependencies:
   flutter_lints: ^3.0.0
 flutter:
   uses-material-design: true
-  assets:
+  assets: # Images from www.pexels.com
     - img/noise.png
     - img/forest.jpg
     - img/cold.jpg
     - img/trees.jpg
     - img/fall.jpg
+    - img/triangles.jpg
+    - img/clouds.jpg
+    - img/bubbles.png # taken from a figma file
+    - img/google.svg

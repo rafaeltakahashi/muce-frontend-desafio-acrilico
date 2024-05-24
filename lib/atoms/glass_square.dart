@@ -8,13 +8,11 @@ class GlassSquare extends StatelessWidget {
     required this.sideLength,
     required this.tint,
     this.blurSize = 10.0,
-    this.opacity = 0.1,
   });
 
   final double sideLength;
   final Color tint;
   final double blurSize;
-  final double opacity; // TODO
 
   @override
   Widget build(BuildContext context) {
